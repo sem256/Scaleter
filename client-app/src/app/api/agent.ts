@@ -24,4 +24,4 @@ const Activities = {
     delete: (id: string) => requests.del(`/activities/${id}`)
 }
 
-export {Activities}
+export default {Activities}
