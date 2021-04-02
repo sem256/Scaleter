@@ -1,14 +1,22 @@
 import { observer } from 'mobx-react-lite'
-import React, { useContext } from 'react'
-import { Grid } from 'semantic-ui-react'
-import ActivityDetails from '../details/ActivityDetails'
-import ActivityForm from '../form/ActivityForm'
+import React, {useEffect,useContext} from 'react'
+import { Dimmer, Grid, Loader } from 'semantic-ui-react'
 import ActivityList from './ActivityList'
 import ActivityStore from '../../../app/stores/activityStore'
 
 const ActivityDashbord: React.FC = () => {
-    const activityStore = useContext(ActivityStore)
-    const {editMode, selectedActivity} = activityStore;
+    const activityStore = useContext(ActivityStore);
+
+    useEffect(() => {
+      activityStore.loadActivities();
+    }, [activityStore])
+  
+    if (activityStore.loadingInitial) {
+      return (
+        <Dimmer active inverted>
+          <Loader inverted content='Loading' />
+        </Dimmer>)
+    }
 
     return (
         <Grid>
@@ -16,13 +24,7 @@ const ActivityDashbord: React.FC = () => {
                 <ActivityList />
             </Grid.Column>
             <Grid.Column width={6}>
-                {selectedActivity
-                    && !editMode
-                    && <ActivityDetails />}
-                {editMode  
-                    && <ActivityForm  
-                            key = {selectedActivity?.id}
-                            activity={selectedActivity!}/>}
+                <h2>Activity filtes</h2>
             </Grid.Column>
         </Grid>
     )
