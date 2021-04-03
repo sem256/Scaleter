@@ -1,8 +1,8 @@
 ﻿using Domain;
+using FluentValidation;
 using MediatR;
 using Persistence;
 using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -26,6 +26,19 @@ namespace Application.Activities
             public string City { get; set; }
 
             public string Venue { get; set; }
+        }
+
+        public class CommandValidation : AbstractValidator<Command>
+        {
+            public CommandValidation()
+            {
+                RuleFor(x => x.Title).NotEmpty();
+                RuleFor(x => x.Description).NotEmpty();
+                RuleFor(x => x.Category).NotEmpty();
+                RuleFor(x => x.Date).NotEmpty();
+                RuleFor(x => x.City).NotEmpty();
+                RuleFor(x => x.Venue).NotEmpty();
+            }
         }
 
         public class Handler : IRequestHandler<Command>
