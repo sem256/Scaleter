@@ -21,11 +21,15 @@ const ActivityDetails: React.FC<RouteComponentProps<DetailParams>> = ({match}) =
         loadActivity(match.params.id);
     }, [loadActivity, match.params.id])
 
-    if(loadingInitial || !activity) 
+    if(loadingInitial) 
     {
         return (<Dimmer active inverted>
             <Loader inverted content='Loading actvivity...' />
         </Dimmer>)
+    }
+
+    if(!activity){
+        return <h2>Activity not found!</h2>
     }
 
     return (
