@@ -1,0 +1,15 @@
+C:\Self education\Projects\Scaleter\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.deps.json
+C:\Self education\Projects\Scaleter\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.dll
+C:\Self education\Projects\Scaleter\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.pdb
+C:\Self education\Projects\Scaleter\Infrastructure\bin\Debug\netcoreapp3.1\Application.dll
+C:\Self education\Projects\Scaleter\Infrastructure\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Self education\Projects\Scaleter\Infrastructure\bin\Debug\netcoreapp3.1\Persistence.dll
+C:\Self education\Projects\Scaleter\Infrastructure\bin\Debug\netcoreapp3.1\Application.pdb
+C:\Self education\Projects\Scaleter\Infrastructure\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Self education\Projects\Scaleter\Infrastructure\bin\Debug\netcoreapp3.1\Persistence.pdb
+C:\Self education\Projects\Scaleter\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csprojAssemblyReference.cache
+C:\Self education\Projects\Scaleter\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfoInputs.cache
+C:\Self education\Projects\Scaleter\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfo.cs
+C:\Self education\Projects\Scaleter\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete
+C:\Self education\Projects\Scaleter\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll
+C:\Self education\Projects\Scaleter\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb
