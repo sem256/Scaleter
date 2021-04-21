@@ -2,16 +2,17 @@ import { observer } from 'mobx-react-lite'
 import React, {useEffect,useContext} from 'react'
 import { Dimmer, Grid, Loader } from 'semantic-ui-react'
 import ActivityList from './ActivityList'
-import ActivityStore from '../../../app/stores/activityStore'
+import { RootStoreContext } from '../../../app/stores/rootStore'
 
 const ActivityDashbord: React.FC = () => {
-    const activityStore = useContext(ActivityStore);
+    const rootStore = useContext(RootStoreContext);
+    const {loadActivities, loadingInitial} = rootStore.activityStore;
 
     useEffect(() => {
-      activityStore.loadActivities();
-    }, [activityStore])
+      loadActivities();
+    }, [loadActivities])
   
-    if (activityStore.loadingInitial) {
+    if (loadingInitial) {
       return (
         <Dimmer active inverted>
           <Loader inverted content='Loading' />
