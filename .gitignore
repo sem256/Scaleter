@@ -9,6 +9,8 @@
 /Domain/obj
 /Persistence/bin
 /Persistence/obj
+/Infrastructure/bin
+/Infrastructure/obj
 
 # dependencies
 /node_modules
